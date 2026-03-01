@@ -3,7 +3,10 @@
 Projeto de deploy de site estático utilizando **Nginx + WSL (Ubuntu) + GitHub**, com aplicação de boas práticas de segurança, organização de logs e permissões corretas de arquivos.
 
 ---
-
+## Aluno
+- **Nome:** Davi Lucas Conteli Campoi
+- **RA:** 6324300
+- **Curso:** Análise e Desenvolvimento de Sistemas - 5° Semestre
 ## 📌 Sobre o Projeto
 
 O **TFDeploy** é um projeto focado em:
@@ -149,10 +152,6 @@ Aplicação de boas práticas DevOps iniciais
 
 Deploy controlado e versionado
 
-👨‍💻 Autor
-
-Davi Campoi
-GitHub: https://github.com/DaviCampoi
 
 📌 Próximos Passos
 
@@ -168,7 +167,6 @@ Aplicar cache e compressão (gzip)
 
 
 ---
-
 Agora é só:
 
 1. Abrir seu `README.md`
@@ -180,3 +178,4 @@ Agora é só:
 7. `git push`
 
 Se você quiser, posso deixar ele ainda mais bonito com badges, status, escopo profissional e layout estilo projeto open source 😎
+
