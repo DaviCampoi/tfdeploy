@@ -1,36 +1,34 @@
-🚀 TFDeploy
+# 🚀 TFDeploy
 
-Projeto de deploy de site estático utilizando Nginx + WSL (Ubuntu) + GitHub, com aplicação de boas práticas de segurança, organização de logs e permissões corretas de arquivos.
+Projeto de deploy de site estático utilizando **Nginx + WSL (Ubuntu) + GitHub**, com aplicação de boas práticas de segurança, organização de logs e permissões corretas de arquivos.
 
-📌 Sobre o Projeto
+---
 
-O TFDeploy é um projeto focado em:
+## 📌 Sobre o Projeto
 
-Configuração manual de servidor Nginx
+O **TFDeploy** é um projeto focado em:
 
-Deploy local via WSL
+- Configuração manual de servidor Nginx
+- Deploy local via WSL
+- Organização de permissões Linux
+- Hardening básico de segurança
+- Publicação e versionamento via GitHub
 
-Organização de permissões Linux
+---
 
-Hardening básico de segurança
+## 🛠 Tecnologias Utilizadas
 
-Publicação e versionamento via GitHub
+- Linux (WSL - Ubuntu)
+- Nginx
+- Git
+- GitHub
+- HTML5
+- CSS3
 
-🛠 Tecnologias Utilizadas
+---
 
-Linux (WSL - Ubuntu)
+## 📂 Estrutura do Projeto
 
-Nginx
-
-Git
-
-GitHub
-
-HTML5
-
-CSS3
-
-📂 Estrutura do Projeto
 TF01/
 │
 ├── website/
@@ -44,64 +42,80 @@ TF01/
 Arquivos publicados em:
 
 /var/www/piscesandroses/
-🌐 Configuração do Servidor (Resumo)
-🔹 Virtual Host Nginx
 
-Porta 80
+---
 
-Root customizado
+## 🌐 Configuração do Servidor (Resumo)
 
-Logs personalizados
+### 🔹 Virtual Host Nginx
 
-Segurança aplicada
+- Porta 80
+- Root customizado
+- Logs personalizados
+- Segurança aplicada
+- Remoção do site default
 
-Remoção do site default
+---
 
-🔐 Permissões Aplicadas
-📂 Pastas → 755
+## 🔐 Permissões Aplicadas
+
+### 📂 Pastas → 755
+
 rwxr-xr-x
 
 Permite que o Nginx acesse diretórios sem conceder escrita pública.
 
-📄 Arquivos → 644
+### 📄 Arquivos → 644
+
 rw-r--r--
 
 Evita execução indevida e mantém segurança.
 
-🚫 Remoção do Site Default
+---
+
+## 🚫 Remoção do Site Default
 
 Arquivo removido:
 
 /etc/nginx/sites-enabled/default
-Motivo:
 
-Evitar conflito
+### Motivo:
 
-Evitar página padrão do Nginx
+- Evitar conflito
+- Evitar página padrão do Nginx
+- Melhor organização do servidor
 
-Melhor organização do servidor
+---
 
-📊 Logs Personalizados
-/var/log/nginx/pisces_access.log
-/var/log/nginx/pisces_error.log
+## 📊 Logs Personalizados
+
+/var/log/nginx/pisces_access.log  
+/var/log/nginx/pisces_error.log  
 
 Benefícios:
 
-Debug facilitado
+- Debug facilitado
+- Auditoria de acessos
+- Isolamento do projeto
 
-Auditoria de acessos
+---
 
-Isolamento do projeto
+## 🛡 Segurança Aplicada
 
-🛡 Segurança Aplicada
-✔ Bloqueio de arquivos ocultos
+### ✔ Bloqueio de arquivos ocultos
+
+```nginx
 location ~ /\.ht {
     deny all;
 }
 ✔ Headers de Segurança
+
 X-Frame-Options
+
 X-Content-Type-Options
+
 X-XSS-Protection
+
 ✔ Uso de try_files
 try_files $uri $uri/ =404;
 
@@ -118,9 +132,6 @@ Reiniciar Nginx:
 sudo nginx -t
 sudo systemctl restart nginx
 📦 Versionamento
-
-Subida para o GitHub via:
-
 git add .
 git commit -m "Update deploy"
 git push
@@ -143,7 +154,7 @@ Deploy controlado e versionado
 Davi Campoi
 GitHub: https://github.com/DaviCampoi
 
-📌 Próximos Passos (Evolução do Projeto)
+📌 Próximos Passos
 
 Implementar HTTPS (SSL)
 
@@ -154,3 +165,18 @@ Deploy em VPS
 Automatizar com GitHub Actions
 
 Aplicar cache e compressão (gzip)
+
+
+---
+
+Agora é só:
+
+1. Abrir seu `README.md`
+2. Apagar tudo
+3. Colar isso
+4. Salvar
+5. `git add .`
+6. `git commit -m "Atualizando README"`
+7. `git push`
+
+Se você quiser, posso deixar ele ainda mais bonito com badges, status, escopo profissional e layout estilo projeto open source 😎
